@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+
+spring:
+  application:
+    name: redis-cluster
+  # Spring Redis Cache
+  # 设置缓存类型，这里使用Redis作为缓存服务器
+  cache:
+    type: REDIS
+    # 定义cache名称，用于在缓存注解中引用，多个名称可以使用逗号分隔
+    cache-names: redisCache
+    # 允许保存空值
+    redis:
+      cache-null-values: true
+      # 自定义缓存前缀
+      key-prefix: zpy
+      # 是否使用前缀
+      use-key-prefix: true
+      # set redis cache
+      time-to-live: 1000000
+  data:
+    redis:
+      cluster:
+        max-redirects: 6
+        nodes:
+          - 192.168.0.100:6381
+          - 192.168.0.100:6382
+          - 192.168.0.100:6383
+          - 192.168.0.100:6384
+          - 192.168.0.100:6385
+          - 192.168.0.100:6386
+      password: mm518147
+      client-type: lettuce
+      lettuce:
+        pool:
+          min-idle: 0
+          max-active: 8
+          max-wait: -1
+          max-idle: 8
+          enabled: true
+      redisson:
+        file: classpath:redisson.yml
+

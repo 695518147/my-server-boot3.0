@@ -1,0 +1,5 @@
+cache:
+  cacheNameConfigurations:
+    employee_info: 60
+    employee_info1: 60 * 60
+    employee_info2: 3 * 24 * 60 * 60

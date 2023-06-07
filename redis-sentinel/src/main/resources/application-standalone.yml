@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /testRedis
+spring:
+  application:
+    name: TestRedis
+  redis:
+    host: localhost
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    port: 7000
+    password: 123456
+# Redis连接池配置
+jedis:
+  pool:
+    config:
+      maxTotal: 200
+      maxWaitMillis: 5000
+      maxIdle: 100
+
+
+

@@ -1,0 +1,34 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /testRedis
+spring:
+  application:
+    name: TestRedis
+  redis:
+    database: 0
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+    # Redis Cluster 集群配置
+    cluster:
+      nodes:
+        - 192.168.184.58:7000
+        - 192.168.184.58:7001
+        - 192.168.184.58:7002
+        - 192.168.184.59:7000
+        - 192.168.184.59:7001
+        - 192.168.184.59:7002
+      max-redirects: 3
+    password:
+    timeout: 5000
+# Redis连接池配置
+jedis:
+  pool:
+    config:
+      maxTotal: 100
+      maxWaitMillis: 5000
+      maxIdle: 10

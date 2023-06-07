@@ -1,0 +1,13 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /testRedis
+spring:
+  application:
+    name: TestRedis
+  redis:
+    sentinel:
+      master:
+      nodes:
+    password:
+

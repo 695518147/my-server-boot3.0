@@ -1,0 +1,17 @@
+sadd key member [member ...]
+srem key member [member ...]
+spop key [count]
+srandmember key [count]
+sdiff key [key ...]
+sdiffstore destination key [key ...]
+sinter key [key ...]
+sinterstore destination key [key ...]
+sunion key [key ...]
+sunionstore destination key [key ...]
+scard key
+smembers key
+sismember key member
+smismember key member [member ...]
+smove source destination member
+sscan key cursor [match pattern] [count count]
+sintercard key [key ...]
