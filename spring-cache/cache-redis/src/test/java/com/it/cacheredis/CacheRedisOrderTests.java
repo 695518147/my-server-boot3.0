@@ -7,6 +7,7 @@ import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.util.StopWatch;
 
 import java.util.List;
 
@@ -20,7 +21,11 @@ class CacheRedisOrderTests {
 
     @Test
     void query() {
+        StopWatch stopWatch = new StopWatch();
+        stopWatch.start();
         OmsOrder omsOrder = omsOrderDao.queryById(22l);
+        stopWatch.stop();
+        System.out.println(stopWatch.getTotalTimeMillis());
     }
 
     @Test

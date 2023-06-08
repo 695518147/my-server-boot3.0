@@ -1,0 +1,19 @@
+spring:
+  cache:
+    type: redis   # 指定使用的缓存类型
+    # redis:    当自定义ChacheManager时，就这里的配置不需要配置，配置了也不起作用
+    #   use-key-prefix: true
+    #  key-prefix: "demo:"
+    #  time-to-live: 60000  #缓存超时时间 单位：ms
+    #  cache-null-values: false #是否缓存空值
+    cache-names: user
+
+cache:
+  ttl: '{"user":60,"dept":30 * 3}'
+  env: dev
+
+
+
+
+
+
