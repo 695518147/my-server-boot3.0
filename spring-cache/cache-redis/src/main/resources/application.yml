@@ -39,9 +39,24 @@ spring:
     #  time-to-live: 60000  #缓存超时时间 单位：ms
     #  cache-null-values: false #是否缓存空值
     cache-names: user
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/mall
+    username: root
+    password: Mm518147&
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
 cache:
   ttl: '{"user":60,"dept":30 * 3}'
   env: dev
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    cache-enabled: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
 
 
 
