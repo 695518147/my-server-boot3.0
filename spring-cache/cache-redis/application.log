@@ -1,0 +1,85 @@
+2023-06-09T16:49:27.837+08:00  INFO 46709 --- [main] com.it.cacheredis.CacheRedisOrderTests   : Starting CacheRedisOrderTests using Java 20.0.1 with PID 46709 (started by kuangbendewoniu in /Users/kuangbendewoniu/Desktop/my-server-boot3.0/spring-cache/cache-redis)
+2023-06-09T16:49:27.839+08:00  INFO 46709 --- [main] com.it.cacheredis.CacheRedisOrderTests   : The following 3 profiles are active: "redis", "cache", "mybatis"
+2023-06-09T16:49:28.797+08:00  INFO 46709 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-09T16:49:28.799+08:00  INFO 46709 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-09T16:49:28.832+08:00  INFO 46709 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+2023-06-09T16:49:30.683+08:00  INFO 46709 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-06-09T16:49:30.739+08:00  INFO 46709 --- [main] com.it.cacheredis.CacheRedisOrderTests   : Started CacheRedisOrderTests in 3.28 seconds (process running for 4.28)
+2023-06-09T16:49:30.815+08:00 ERROR 46709 --- [registrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:205) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:109) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:62) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:77) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:165) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationRegistrator.register(DefaultApplicationRegistrator.java:56) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.9.jar:6.0.9]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2023-06-09T16:49:31.989+08:00  INFO 46709 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-09T16:49:32.549+08:00  INFO 46709 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5562f297
+2023-06-09T16:49:32.556+08:00  INFO 46709 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-09T16:49:33.037+08:00  INFO 46709 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-09T16:49:33.069+08:00  INFO 46709 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-09T17:58:44.529+08:00  INFO 48751 --- [main] com.it.cacheredis.CacheRedisOrderTests   : Starting CacheRedisOrderTests using Java 20.0.1 with PID 48751 (started by kuangbendewoniu in /Users/kuangbendewoniu/Desktop/my-server-boot3.0/spring-cache/cache-redis)
+2023-06-09T17:58:44.532+08:00  INFO 48751 --- [main] com.it.cacheredis.CacheRedisOrderTests   : The following 3 profiles are active: "redis", "cache", "mybatis"
+2023-06-09T17:58:46.697+08:00  INFO 48751 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-09T17:58:46.703+08:00  INFO 48751 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-09T17:58:46.766+08:00  INFO 48751 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 Redis repository interfaces.
+2023-06-09T17:58:50.900+08:00  INFO 48751 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-06-09T17:58:51.009+08:00  INFO 48751 --- [main] com.it.cacheredis.CacheRedisOrderTests   : Started CacheRedisOrderTests in 7.635 seconds (process running for 12.447)
+2023-06-09T17:58:51.214+08:00 ERROR 48751 --- [registrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:205) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:109) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:62) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:77) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:165) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationRegistrator.register(DefaultApplicationRegistrator.java:56) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.9.jar:6.0.9]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+
+2023-06-09T17:58:53.239+08:00  INFO 48751 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-06-09T17:58:54.118+08:00  INFO 48751 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5562f297
+2023-06-09T17:58:54.124+08:00  INFO 48751 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-06-09T17:58:54.598+08:00  INFO 48751 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-06-09T17:58:54.624+08:00  INFO 48751 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-06-09T18:06:55.904+08:00  INFO 50556 --- [main] com.it.cacheredis.CacheRedisOrderTests   : Starting CacheRedisOrderTests using Java 20.0.1 with PID 50556 (started by kuangbendewoniu in /Users/kuangbendewoniu/Desktop/my-server-boot3.0/spring-cache/cache-redis)
+2023-06-09T18:06:55.907+08:00  INFO 50556 --- [main] com.it.cacheredis.CacheRedisOrderTests   : The following 3 profiles are active: "redis", "cache", "mybatis"
+2023-06-09T18:06:58.949+08:00  INFO 50556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-06-09T18:06:58.952+08:00  INFO 50556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2023-06-09T18:06:58.990+08:00  INFO 50556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 19 ms. Found 0 Redis repository interfaces.
+2023-06-09T18:07:01.498+08:00  INFO 50556 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2023-06-09T18:07:01.560+08:00  INFO 50556 --- [main] com.it.cacheredis.CacheRedisOrderTests   : Started CacheRedisOrderTests in 7.28 seconds (process running for 11.936)
+2023-06-09T18:07:01.646+08:00 ERROR 50556 --- [registrationTask1] o.s.s.s.TaskUtils$LoggingErrorHandler    : Unexpected error occurred in scheduled task
+
+java.lang.IllegalStateException: couldn't determine local port. Please set spring.boot.admin.client.instance.service-base-url.
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getLocalServerPort(DefaultApplicationFactory.java:205) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getServiceBaseUrl(DefaultApplicationFactory.java:109) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getServiceUrl(ServletApplicationFactory.java:62) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.ServletApplicationFactory.getManagementBaseUrl(ServletApplicationFactory.java:77) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.getHealthUrl(DefaultApplicationFactory.java:165) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationFactory.createApplication(DefaultApplicationFactory.java:80) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at de.codecentric.boot.admin.client.registration.DefaultApplicationRegistrator.register(DefaultApplicationRegistrator.java:56) ~[spring-boot-admin-client-3.0.2.jar:3.0.2]
+	at org.springframework.scheduling.support.DelegatingErrorHandlingRunnable.run(DelegatingErrorHandlingRunnable.java:54) ~[spring-context-6.0.9.jar:6.0.9]
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:577) ~[na:na]
+	at java.base/java.util.concurrent.FutureTask.runAndReset(FutureTask.java:358) ~[na:na]
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:305) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:1623) ~[na:na]
+

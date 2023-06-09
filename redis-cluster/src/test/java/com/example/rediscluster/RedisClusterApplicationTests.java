@@ -27,6 +27,8 @@ class RedisClusterApplicationTests {
     private StringRedisTemplate stringRedisTemplate;
     @Test
     void contextLoads() {
+
+
     }
 
     @Test
