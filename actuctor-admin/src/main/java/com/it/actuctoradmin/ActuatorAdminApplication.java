@@ -6,10 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 @EnableAdminServer
-public class ActuctorAdminApplication {
+public class ActuatorAdminApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ActuctorAdminApplication.class, args);
+        SpringApplication.run(ActuatorAdminApplication.class, args);
     }
 
 }

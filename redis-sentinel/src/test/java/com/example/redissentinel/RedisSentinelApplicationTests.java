@@ -1,5 +1,6 @@
 package com.example.redissentinel;
 
+import com.example.redissentinel.service.CarcostService;
 import com.github.javafaker.Faker;
 import jakarta.annotation.Resource;
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.security.SecureRandom;
+import java.time.Duration;
 
 @SpringBootTest
 class RedisSentinelApplicationTests {
@@ -20,21 +22,20 @@ class RedisSentinelApplicationTests {
     // RedisTemplate，可以进行所有的操作
     private RedisTemplate<Object, Object> redisTemplate;
 
+    @Resource
+    private CarcostService carcostService;
+
     @Test
     void read() {
-        for (int i = 0; i < 10; i++) {
-            System.out.println(redisTemplate.opsForValue().get("60a4"));
+        for (int i = 0; i < 1000; i++) {
+            redisTemplate.opsForValue().set("test" + i, i, Duration.ofSeconds(20 + i));
         }
     }
 
     @Test
     void contextLoads() {
 
-        for (int i = 0; i < 10; i++) {
-            String key = randomString(4);
-            String value = randomString(16);
-            redisTemplate.opsForValue().set(key, value);
-        }
+        carcostService.test();
 
     }
 

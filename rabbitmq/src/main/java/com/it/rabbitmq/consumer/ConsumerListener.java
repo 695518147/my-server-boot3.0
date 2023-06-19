@@ -2,7 +2,6 @@ package com.it.rabbitmq.consumer;
 
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
@@ -25,11 +24,11 @@ public class ConsumerListener {
 //        log.info("handleMessage2: {}, {}" , message, Thread.currentThread().getName());
 //    }
 
-    @RabbitListener(queues = "fanoutQueue1")
-    public void handleMessage3(String message)throws InterruptedException {
-        Thread.sleep(1000);
-        log.info("handleMessage3: {}, {}, {}",env.getProperty("server.port") , message, Thread.currentThread().getName());
-    }
+//    @RabbitListener(queues = "fanoutQueue1")
+//    public void handleMessage3(String message)throws InterruptedException {
+//        Thread.sleep(1000);
+//        log.info("handleMessage3: {}, {}, {}",env.getProperty("server.port") , message, Thread.currentThread().getName());
+//    }
 
 //    @RabbitListener(queues = "fanoutQueue2")
 //    public void handleMessage4(String message)throws InterruptedException {

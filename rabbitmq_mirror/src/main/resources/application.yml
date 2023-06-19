@@ -1,53 +1,83 @@
 server:
-  port: 9001
+  port: 9002
 
 spring:
   profiles:
     active:
       - rabbit
-
-
   rabbitmq:
-    addresses: 127.0.0.1:5672,127.0.0.1:5673,127.0.0.1:5674 #指定client连接到的server的地址，多个以逗号分隔(优先取addresses，然后再取host)
-    #    port:
-    ##集群配置 addresses之间用逗号隔开
-    # addresses: ip:port,ip:port
-    password: admin
+    # 指定客户端连接到的服务器地址，多个地址以逗号分隔（优先使用 addresses，然后使用 host）
+    addresses: 127.0.0.1:5672,127.0.0.1:5673,127.0.0.1:5674
     username: admin
-    virtual-host: clusterMQ # 连接到rabbitMQ的vhost
-    requested-heartbeat: 60 #指定心跳超时，单位秒，0为不指定；默认60s
+    password: admin
+    # 连接到 RabbitMQ 的虚拟主机
+    virtual-host: clusterMQ
+    # 指定心跳超时，单位秒，0 表示不指定；默认 60 秒
+    requested-heartbeat: 60
+    # 发布者确认类型
     publisher-confirm-type: simple
+    # 发布者返回
     publisher-returns: false
-#    connection-timeout: #连接超时，单位毫秒，0表示无穷大，不超时
-#    cache:
-#      channel.size: # 缓存中保持的channel数量
-#      channel.checkout-timeout: # 当缓存数量被设置时，从缓存中获取一个channel的超时时间，单位毫秒；如果为0，则总是创建一个新channel
-#      connection.size: # 缓存的连接数，只有是CONNECTION模式时生效
-#      connection.mode: # 连接工厂缓存模式：CHANNEL 和 CONNECTION
-#    listener:
-#      simple.auto-startup: # 是否启动时自动启动容器
-#      simple.acknowledge-mode: # 表示消息确认方式，其有三种配置方式，分别是none、manual和auto；默认auto
-#      simple.concurrency: # 最小的消费者数量
-#      simple.max-concurrency: # 最大的消费者数量
-#      simple.prefetch: # 指定一个请求能处理多少个消息，如果有事务的话，必须大于等于transaction数量.
-#      simple.transaction-size: # 指定一个事务处理的消息数量，最好是小于等于prefetch的数量.
-#      simple.default-requeue-rejected: # 决定被拒绝的消息是否重新入队；默认是true（与参数acknowledge-mode有关系）
-#      simple.idle-event-interval: # 多少长时间发布空闲容器时间，单位毫秒
-#      simple.retry.enabled: # 监听重试是否可用
-#      simple.retry.max-attempts: # 最大重试次数
-#      simple.retry.initial-interval: # 第一次和第二次尝试发布或传递消息之间的间隔
-#      simple.retry.multiplier: # 应用于上一重试间隔的乘数
-#      simple.retry.max-interval: # 最大重试时间间隔
-#      simple.retry.stateless: # 重试是有状态or无状态
-#    template:
-#      mandatory: # 启用强制信息；默认false
-#      receive-timeout: # receive() 操作的超时时间
-#      reply-timeout: # sendAndReceive() 操作的超时时间
-#      retry.enabled: # 发送重试是否可用
-#      retry.max-attempts: # 最大重试次数
-#      retry.initial-interval: # 第一次和第二次尝试发布或传递消息之间的间隔
-#      retry.multiplier: # 应用于上一重试间隔的乘数
-#      retry.max-interval: #最大重试时间间隔
-#
-#
-#
+    # 连接超时，单位毫秒，0 表示无穷大，不超时
+    # connection-timeout:
+
+    # 缓存配置
+    # cache:
+      # 缓存中保持的 channel 数量
+      # channel.size:
+      # 当缓存数量被设置时，从缓存中获取一个 channel 的超时时间，单位毫秒；如果为 0，则总是创建一个新 channel
+      # channel.checkout-timeout:
+      # 缓存的连接数，只有是 CONNECTION 模式时生效
+      # connection.size:
+      # 连接工厂缓存模式：CHANNEL 和 CONNECTION
+      # connection.mode:
+
+    # 监听器配置
+    # listener:
+      # 是否启动时自动启动容器
+      # simple.auto-startup:
+      # 表示消息确认方式，有三种配置方式，分别是 none、manual 和 auto；默认 auto
+      # simple.acknowledge-mode:
+      # 最小的消费者数量
+      # simple.concurrency:
+      # 最大的消费者数量
+      # simple.max-concurrency:
+      # 指定一个请求能处理多少个消息，如果有事务的话，必须大于等于 transaction 数量
+      # simple.prefetch:
+      # 指定一个事务处理的消息数量，最好是小于等于 prefetch 的数量
+      # simple.transaction-size:
+      # 决定被拒绝的消息是否重新入队；默认是 true（与参数 acknowledge-mode 有关系）
+      # simple.default-requeue-rejected:
+      # 多少长时间发布空闲容器时间，单位毫秒
+      # simple.idle-event-interval:
+      # 监听重试是否可用
+      # simple.retry.enabled:
+      # 最大重试次数
+      # simple.retry.max-attempts:
+      # 第一次和第二次尝试发布或传递消息之间的间隔
+      # simple.retry.initial-interval:
+      # 应用于上一重试间隔的乘数
+      # simple.retry.multiplier:
+      # 最大重试时间间隔
+      # simple.retry.max-interval:
+      # 重试是有状态还是无状态
+      # simple.retry.stateless:
+
+    # 模板配置
+    # template:
+      # 启用强制信息；默认 false
+      # mandatory:
+      # receive() 操作的超时时间
+      # receive-timeout:
+      # sendAndReceive() 操作的超时时间
+      # reply-timeout:
+      # 发送重试是否可用
+      # retry.enabled:
+      # 最大重试次数
+      # retry.max-attempts:
+      # 第一次和第二次尝试发布或传递消息之间的间隔
+      # retry.initial-interval:
+      # 应用于上一重试间隔的乘数
+      # retry.multiplier:
+      # 最大重试时间间隔
+      # retry.max-interval:
